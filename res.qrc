@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/router.png</file>
+        <file>image/networkcable.png</file>
+        <file>image/deleteicon.png</file>
+        <file>image/play.png</file>
+        <file>image/envelope_blue.png</file>
+        <file>image/envelope_green.png</file>
+        <file>image/envelope_red.png</file>
+        <file>image/envelope_yellow.png</file>
+        <file>image/Half Duplex.png</file>
+        <file>image/Chart.png</file>
+    </qresource>
+</RCC>

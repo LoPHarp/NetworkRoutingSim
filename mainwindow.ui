@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1928</width>
+    <height>1351</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>1491</width>
+      <height>931</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Видалити</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnGenerate">
+    <property name="geometry">
+     <rect>
+      <x>1510</x>
+      <y>0</y>
+      <width>201</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>3 регіональні мережі,
+кожна з яких має мінімум 9
+комунікаційних вузлів(Середній ступінь мережі - 2.5)</string>
+    </property>
+    <property name="text">
+     <string>Згенерувати мережу</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAddNode">
+    <property name="geometry">
+     <rect>
+      <x>1510</x>
+      <y>80</y>
+      <width>201</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Додати вузол</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+ {
+    text-align: center;
+    padding: 5px;
+}</string>
+    </property>
+    <property name="icon">
+     <iconset resource="res.qrc">
+      <normaloff>:/image/router.png</normaloff>:/image/router.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAddEdge">
+    <property name="geometry">
+     <rect>
+      <x>1510</x>
+      <y>160</y>
+      <width>91</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Провести кабель</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+ {
+    text-align: center;
+    padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="res.qrc">
+      <normaloff>:/image/networkcable.png</normaloff>:/image/networkcable.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnDelete">
+    <property name="geometry">
+     <rect>
+      <x>1510</x>
+      <y>240</y>
+      <width>201</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Видалити</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+ {
+    text-align: center;
+    padding: 5px;
+}</string>
+    </property>
+    <property name="icon">
+     <iconset resource="res.qrc">
+      <normaloff>:/image/deleteicon.png</normaloff>:/image/deleteicon.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>48</width>
+      <height>48</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>1720</x>
+      <y>0</y>
+      <width>201</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Симуляція передачі</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>22</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>ID Відправника</string>
+     </property>
+     <property name="text">
+      <string>ID Відправника</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinSourceID">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>81</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>ID Відправника</string>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>1000</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>20</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>ID Отримувача</string>
+     </property>
+     <property name="text">
+      <string>ID Отримувача</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinTargetID">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>40</y>
+       <width>81</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>ID Отримувача</string>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>1000</number>
+     </property>
+     <property name="value">
+      <number>2</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>131</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Розмір повідомлення</string>
+     </property>
+     <property name="text">
+      <string>Розмір повідомлення</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinMsgSize">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>85</y>
+       <width>181</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Розмір повідомлення</string>
+     </property>
+     <property name="maximum">
+      <number>100000</number>
+     </property>
+     <property name="value">
+      <number>200</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>115</y>
+       <width>131</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Розмір пакету (MTU)</string>
+     </property>
+     <property name="text">
+      <string>Розмір пакету (MTU)</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinPacketSize">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>181</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Розмір пакету (MTU)</string>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>10000</number>
+     </property>
+     <property name="value">
+      <number>100</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnStartSimulation">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>260</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Play</string>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+ {
+    text-align: center;
+    padding: 5px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/image/play.png</normaloff>:/image/play.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>131</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Помилки (%)</string>
+     </property>
+     <property name="text">
+      <string>Помилки (%)</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinErrorProb">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>175</y>
+       <width>181</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Помилки (%)</string>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rbDatagram">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>210</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Дейтаграмний</string>
+     </property>
+     <property name="text">
+      <string>Дейтаграмний</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rbVirtual">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Віртуальний канал</string>
+     </property>
+     <property name="text">
+      <string>Віртуальний канал</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTextEdit" name="textLog">
+    <property name="geometry">
+     <rect>
+      <x>1510</x>
+      <y>400</y>
+      <width>411</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxRbAlgo">
+    <property name="geometry">
+     <rect>
+      <x>1510</x>
+      <y>320</y>
+      <width>151</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Алгоритм шляху</string>
+    </property>
+    <property name="title">
+     <string>Алгоритм шляху</string>
+    </property>
+    <widget class="QRadioButton" name="rbAlgoWeight">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Метрика &quot;Вартість&quot;</string>
+     </property>
+     <property name="text">
+      <string>Метрика &quot;Вартість&quot;</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rbAlgoHops">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Метрика &quot;Хопы&quot;</string>
+     </property>
+     <property name="text">
+      <string>Метрика &quot;Хопы&quot;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btnAddHalfEdge">
+    <property name="geometry">
+     <rect>
+      <x>1620</x>
+      <y>160</y>
+      <width>91</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Провести кабель</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+ {
+    text-align: center;
+    padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="res.qrc">
+      <normaloff>:/image/Half Duplex.png</normaloff>:/image/Half Duplex.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnChartError">
+    <property name="geometry">
+     <rect>
+      <x>1859</x>
+      <y>320</y>
+      <width>61</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Графік: Трафік від Помилок</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+ {
+    text-align: center;
+    padding: 5px;
+}</string>
+    </property>
+    <property name="icon">
+     <iconset resource="res.qrc">
+      <normaloff>:/image/Chart.png</normaloff>:/image/Chart.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnChartService">
+    <property name="geometry">
+     <rect>
+      <x>1720</x>
+      <y>320</y>
+      <width>61</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Графік: Служб. трафік від MTU</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+ {
+    text-align: center;
+    padding: 5px;
+}</string>
+    </property>
+    <property name="icon">
+     <iconset resource="res.qrc">
+      <normaloff>:/image/Chart.png</normaloff>:/image/Chart.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnChartPackets">
+    <property name="geometry">
+     <rect>
+      <x>1790</x>
+      <y>320</y>
+      <width>61</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Графік: Пакети від MTU</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+ {
+    text-align: center;
+    padding: 5px;
+}</string>
+    </property>
+    <property name="icon">
+     <iconset resource="res.qrc">
+      <normaloff>:/image/Chart.png</normaloff>:/image/Chart.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableResults">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>940</y>
+      <width>1911</width>
+      <height>361</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1928</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
